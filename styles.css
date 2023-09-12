@@ -1,0 +1,629 @@
+/* Impor font dari Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
+/* Variabel warna dan properti lainnya */
+:root {
+  --primary-color: #3685fb; /* Warna utama */
+  --primary-color-dark: #2f73d9; /* Warna utama yang lebih gelap */
+  --secondary-color: #fafcff; /* Warna sekunder */
+  --text-dark: #0d213f; /* Warna teks gelap */
+  --text-light: #767268; /* Warna teks terang */
+  --extra-light: #ffffff; /* Warna latar belakang terang */
+  --max-width: 1200px; /* Lebar maksimum konten */
+}
+
+/* Penyempurnaan pergerakan scroll pada elemen HTML */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset styling default */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Kontainer utama untuk setiap bagian */
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+/* Header setiap bagian */
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 4rem;
+}
+
+/* Judul utama setiap bagian */
+.section__title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+/* Subjudul setiap bagian */
+.section__subtitle {
+  font-size: 1rem;
+  color: var(--text-dark);
+  max-width: calc(var(--max-width) / 2);
+}
+
+/* Tombol yang digunakan di seluruh situs */
+.btn {
+  padding: 0.75rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+/* Gaya tautan */
+a {
+  text-decoration: none;
+  border: none;
+}
+
+/* Gaya gambar */
+img {
+  width: 100%;
+  display: block;
+}
+
+/* Font utama untuk seluruh halaman */
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Navigasi situs */
+nav {
+  padding: 1rem;
+  position: fixed;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo situs */
+.nav__logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+/* Warna khusus pada logo */
+.nav__logo span {
+  color: var(--primary-color);
+}
+
+/* Tautan navigasi */
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Gaya tautan dalam navigasi */
+.nav__links .link a {
+  padding: 0 1rem;
+  color: var(--text-dark);
+  transition: 0.5s;
+  font-weight: 600;
+  transition: all 0.5s ease 0s;
+  display: inline-block;
+}
+
+/* Tautan yang aktif */
+.nav__links .link a.active {
+  color: var(--primary-color-dark);
+  transition: all 0.5s ease 0s;
+}
+
+/* Efek hover pada tautan navigasi */
+.nav__links .link a:hover {
+  color: var(--primary-color-dark);
+}
+
+/* Gaya header */
+header {
+  background-color: var(--secondary-color);
+}
+
+/* Kontainer untuk header */
+.header__container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Gambar header */
+.header__image {
+  position: relative;
+}
+
+/* Gaya gambar header */
+.header__image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 0.5rem solid var(--extra-light);
+  border-radius: 2rem;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Gaya gambar header pertama */
+.header__image img:nth-child(1) {
+  max-width: 350px;
+  transform: translate(-75%, -50%);
+}
+
+/* Gaya gambar header kedua */
+.header__image img:nth-child(2) {
+  max-width: 250px;
+  transform: translate(0%, -25%);
+}
+
+/* Konten header */
+.header__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gaya elemen dalam konten header */
+.header__content > div {
+  max-width: 400px;
+  display: grid;
+  gap: 1rem;
+}
+
+/* Subjudul header */
+.header__content .sub__header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Judul header */
+.header__content h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 800;
+  color: var(--text-dark);
+}
+
+/* Tombol-tombol tindakan dalam konten header */
+.header__content .action__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+/* Gaya cerita */
+.story {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+}
+
+/* Gaya gambar video */
+.video__image {
+  position: relative;
+}
+
+/* Gaya gambar dalam video */
+.video__image img {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ikon dalam gambar video */
+.video__image span {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+
+/* Gaya ikon dalam gambar video */
+.video__image span i {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: red;
+  background-color: var(--extra-light);
+  border-radius: 100%;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Teks dalam cerita */
+.story > span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+/* Navigasi destinasi */
+.destination__nav {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Ikon navigasi destinasi */
+.destination__nav span {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-content: center;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 100%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efek hover pada ikon navigasi destinasi */
+.destination__nav span:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+/* Grid destinasi */
+.destination__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+/* Kartu destinasi */
+.destination__card {
+  overflow: hidden;
+  position: relative;
+  isolation: isolate;
+  cursor: pointer;
+}
+
+/* Gaya gambar dalam kartu destinasi */
+.destination__card img {
+  border-radius: 1rem;
+}
+
+/* Detail destinasi */
+.destination__details {
+  position: absolute;
+  width: calc(100% - 2rem);
+  padding: 1rem;
+  bottom: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: var(--extra-light);
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border-radius: 10px;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+/* Efek hover pada detail destinasi */
+.destination__card:hover .destination__details {
+  bottom: 1rem;
+}
+
+/* Judul destinasi */
+.destination__title {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Subjudul destinasi */
+.destination__subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* Bagian perjalanan */
+.trip {
+  background-color: var(--secondary-color);
+}
+
+/* Kontainer perjalanan */
+.trip__container :is(.section__title, .section__subtitle, .view__all) {
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Grid perjalanan */
+.trip__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 4rem 0;
+}
+
+/* Kartu perjalanan */
+.trip__card {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Detail perjalanan */
+.trip__details {
+  padding: 1rem;
+  display: grid;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  background-color: var(--extra-light);
+  cursor: pointer;
+}
+
+/* Rating perjalanan */
+.rating {
+  color: goldenrod;
+}
+
+/* Harga perjalanan */
+.booking__price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Harga dan jenis mata uang */
+.price span {
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+/* Tombol 'Book Now' */
+.book__now {
+  padding: 0.5rem 1.5rem;
+  color: var(--primary-color);
+  outline: none;
+  border: 1px solid var(--primary-color);
+  border-radius: 5rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efek hover pada tombol 'Book Now' */
+.book__now:hover {
+  color: var(--extra-light);
+  background-color: var(--primary-color);
+}
+
+/* Kontainer galeri gambar */
+.gallary__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Kontainer gambar galeri */
+.image__gallary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Kolom dalam galeri gambar */
+.gallary__col {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+}
+
+/* Gaya gambar dalam galeri */
+.gallary__col img {
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Konten dalam galeri */
+.gallary__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Gaya elemen dalam konten galeri */
+.gallary__content > div {
+  max-width: 400px;
+}
+
+/* Subjudul dalam konten galeri */
+.gallary__content .section__subtitle {
+  margin-bottom: 2rem;
+}
+
+/* Bagian berlangganan */
+.subscribe {
+  background-color: var(--secondary-color);
+}
+
+/* Kontainer berlangganan */
+.subscribe__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* Formulir berlangganan */
+.subscribe__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Gaya formulir berlangganan */
+.subscribe__form form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  background-color: var(--extra-light);
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 5rem;
+}
+
+/* Input dalam formulir berlangganan */
+.subscribe__form input {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1rem;
+}
+
+/* Footer situs */
+.footer {
+  background-color: var(--text-dark);
+}
+
+/* Kontainer footer */
+.footer__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5rem;
+  color: var(--secondary-color);
+}
+
+/* Judul kolom footer */
+.footer__col h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Bagian judul dalam kolom footer */
+.footer__col h3 span {
+  color: var(--primary-color);
+}
+
+/* Teks dalam kolom footer */
+.footer__col p {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Efek hover pada teks dalam kolom footer */
+.footer__col p:hover {
+  color: var(--primary-color);
+}
+
+/* Bagian judul dalam kolom footer */
+.footer__col p span {
+  font-weight: 600;
+}
+
+/* Subjudul dalam kolom footer */
+.footer__col h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+/* Footer bar */
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--secondary-color);
+  border-top: 1px solid var(--text-light);
+}
+
+/* Media query untuk lebar layar kurang dari 1200px */
+@media (width < 1200px) {
+  .header__image img:nth-child(1) {
+    max-width: 300px;
+  }
+
+  .header__image img:nth-child(2) {
+    max-width: 200px;
+  }
+}
+
+/* Media query untuk lebar layar kurang dari 900px */
+@media (width < 900px) {
+  .nav__links {
+    display: none;
+  }
+
+  .header__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header__image {
+    min-height: 500px;
+  }
+
+  .destination__grid {
+    gap: 1rem;
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Media query untuk lebar layar kurang dari 600px */
+@media (width < 600px) {
+  .destination__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .trip__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallary__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subscribe__container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
